@@ -1,0 +1,13 @@
+publish:
+  docker:
+    environment:
+      - DOCKER_LAUNCH_DEBUG=true
+    registry: quay.io
+    username: $$QUAY_USER
+    password: $$QUAY_PASSWORD
+    email: $$QUAY_EMAIL
+    repo: quay.io/ukhomeofficedigital/docker-java7-mvn
+    storage_driver: overlay
+    tag:
+      - latest
+      - "$$BUILD_NUMBER"
